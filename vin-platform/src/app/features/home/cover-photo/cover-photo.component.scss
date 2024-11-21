@@ -1,0 +1,45 @@
+.cover-photo-container {
+  position: relative; // Para posicionar el spinner sobre la imagen
+  width: 100%;
+  height: 400px; // Ajusta según tu diseño
+}
+
+.cover-photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0; // Color de fondo mientras carga
+  border-radius: 10px; // Opcional: bordes redondeados
+  transition: opacity 0.3s ease;
+  opacity: 0; // Oculto inicialmente
+}
+
+.cover-photo.loaded {
+  opacity: 1; // Visible cuando la imagen cargó
+}
+
+/* Estilos para el spinner */
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0; /* Color del borde del spinner */
+  border-top: 4px solid #3498db; /* Color del borde activo */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animación de rotación del spinner */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
