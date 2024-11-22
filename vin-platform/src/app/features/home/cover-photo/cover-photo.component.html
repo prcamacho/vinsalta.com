@@ -1,12 +1,12 @@
-<div class="cover-photo-container">
+<div class="cover-photo">
   <!-- Spinner visible mientras no esté cargada la imagen -->
   @if (!isLoaded) {
-  <div class="spinner"></div>
+  <div class="cover-photo__spinner"></div>
   }
-  <!-- Contenedor de la imagen de portada -->
+  <!-- Imagen de portada como fondo -->
   <div
-    class="cover-photo"
-    [class.loaded]="isLoaded"
+    class="cover-photo__background"
+    [class.cover-photo__background--loaded]="isLoaded"
     [style.backgroundImage]="'url(' + coverPhotoUrl + ')'"
   ></div>
 </div>

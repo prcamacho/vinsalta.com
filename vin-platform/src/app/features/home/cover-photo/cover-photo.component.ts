@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './cover-photo.component.scss',
 })
 export class CoverPhotoComponent implements OnInit {
-  coverPhotoUrl = 'assets/images/vin/cover.jpg'; // Ruta de la imagen
+  coverPhotoUrl = 'assets/images/vin/cover.png'; // Ruta de la imagen
   isLoaded = false; // Controla si la imagen ya cargó
 
   ngOnInit(): void {

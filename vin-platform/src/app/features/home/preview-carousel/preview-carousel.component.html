@@ -1,1 +1,29 @@
-<p>preview-carousel works!</p>
+<div class="swiper-container carousel__container">
+  <div class="swiper-wrapper carousel__wrapper">
+    @for (slide of slides; track $index) {
+    <div class="swiper-slide carousel__slide">
+      <img
+        #carouselImage
+        [src]="slide.src"
+        [alt]="slide.alt"
+        (click)="openLightbox(slide.src)"
+        class="carousel__image"
+      />
+    </div>
+    }
+  </div>
+
+  <!-- Botones de navegación -->
+  <div class="carousel__button carousel__button--next"></div>
+  <div class="carousel__button carousel__button--prev"></div>
+
+  <!-- Paginación -->
+  <div class="carousel__pagination"></div>
+</div>
+
+<!-- Lightbox -->
+@if (lightboxOpen) {
+<div class="lightbox__overlay" (click)="closeLightbox()">
+  <img [src]="lightboxImage" alt="Lightbox Image" class="lightbox__image" />
+</div>
+}

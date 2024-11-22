@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'swiper/swiper-bundle.css';
+
+body {
+  background-color: #1c1c1c;
+  color: #ffffff; /* Opcional: texto en blanco para contraste */
+  margin: 0; /* Quita márgenes predeterminados del navegador */
+}
+
+html,
+body {
+  height: 100%; /* Asegura que el fondo cubra toda la altura */
+}

@@ -1,0 +1,126 @@
+/* Bloque principal del carrusel */
+.carousel {
+  &__container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    margin-top: 15%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #1c1c1c;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transición suave */
+    display: flex; /* Asegura que las imágenes se ajusten dentro del contenedor */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    /* Ajuste de tamaño responsive para las imágenes */
+    @media (max-width: 640px) {
+      width: 80%;
+      height: 250px; /* Altura mayor que el ancho */
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      width: 60%;
+      height: 350px; /* Altura mayor que el ancho */
+    }
+
+    @media (min-width: 1025px) {
+      width: 30%;
+      height: 450px; /* Altura mayor que el ancho */
+    }
+
+    &:hover {
+      transform: scale(
+        1.05
+      ); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    }
+  }
+
+  &__image {
+    max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+    max-height: 100%; /* Hace que la imagen no se exceda en altura */
+    object-fit: contain; /* Cubre el área sin distorsionar la imagen */
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    &--next {
+      right: 10px;
+    }
+
+    &--prev {
+      left: 10px;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+
+    .swiper-pagination-bullet {
+      background-color: #fff;
+      opacity: 0.7;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #3498db; /* Color activo */
+      opacity: 1;
+    }
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que esté por encima del carrusel */
+    overflow: hidden; /* Asegura que nada se desborde */
+  }
+
+  &__image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+}
