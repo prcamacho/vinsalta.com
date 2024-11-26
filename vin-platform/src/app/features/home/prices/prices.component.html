@@ -1,0 +1,39 @@
+<div class="pricing-table">
+  <h2 class="pricing-table__title">Tarifas</h2>
+
+  <div class="pricing-table__items">
+    @for (category of pricingCategories; track $index) {
+    <div class="pricing-table__category">
+      <h3 class="pricing-table__category-title">{{ category.title }}</h3>
+      @for (item of category.items; track $index) {
+      <div class="pricing-table__item">
+        <span class="pricing-table__item-name">{{ item.name }}</span>
+        <span class="pricing-table__item-price">{{ item.price }}</span>
+      </div>
+      }
+    </div>
+    }
+  </div>
+
+  <!-- Botón de pago y mensaje -->
+  <div class="payment-section">
+    <a
+      href="https://link.mercadopago.com.ar/bienvenida"
+      target="_blank"
+      class="payment-section__button"
+    >
+      Pagar
+    </a>
+    <p class="payment-section__message">
+      Una vez realizado el pago, adjunte el comprobante en un mensaje de
+      <a
+        href="https://api.whatsapp.com/send?phone=543875113242&text=Hola"
+        target="_blank"
+        class="payment-section__link"
+      >
+        WhatsApp
+      </a>
+      indicando el servicio que desea.
+    </p>
+  </div>
+</div>

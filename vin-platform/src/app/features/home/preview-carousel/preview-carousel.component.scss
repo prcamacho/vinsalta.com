@@ -5,7 +5,23 @@
     z-index: 1;
     width: 100%;
     height: auto;
-    margin-top: 15%;
+    margin-top: 18%;
+    h2 {
+      font-family: "Playfair Display", serif; /* Elegante y sofisticada */
+      font-size: 2.4rem; /* Tamaño destacado */
+      color: #e60026; /* Rojo sensual */
+      text-align: center; /* Centrado */
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px; /* Espaciado para mayor elegancia */
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
+      font-weight: bold; /* Negrita para mayor impacto */
+      transition: transform 0.4s ease, color 0.4s ease; /* Animaciones suaves */
+
+      &:hover {
+        color: #e60027; /* Un fucsia vivo al pasar el mouse */
+        transform: scale(1.15); /* Más grande al hover */
+      }
+    }
   }
 
   &__wrapper {

@@ -1,0 +1,112 @@
+.pricing-table {
+  padding: 2rem;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: clamp(2rem, 3vw, 3rem);
+    text-align: center;
+    color: #e60026; /* Rojo "sensual" */
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+  }
+
+  &__category {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: #333333; /* Efecto sutil al pasar el cursor */
+    }
+  }
+
+  &__category-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f76c6c; /* Color para los títulos de categoría */
+    font-weight: bold;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #444444;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item-name {
+    font-size: 1rem;
+    color: #d4d4d4;
+  }
+
+  &__item-price {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
+}
+.payment-section {
+  text-align: center;
+  margin-top: 30px;
+
+  &__button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e60026; // Rojo sensual
+    color: #fff; // Texto blanco
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+      background-color: #e60026; // Rojo más claro en hover
+    }
+  }
+
+  &__message {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #fff; // Texto blanco
+    line-height: 1.5;
+  }
+  &__link {
+    display: inline-block;
+    background-color: #28a745; // Verde para el fondo
+    color: #fff; // Texto blanco
+    border-radius: 4px;
+    text-decoration: none; // Sin subrayado
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #218838; // Verde más oscuro en hover
+    }
+  }
+}
