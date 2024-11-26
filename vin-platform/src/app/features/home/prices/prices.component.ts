@@ -94,7 +94,7 @@ export class PricesComponent {
         { name: 'Pies:', price: '$3500' },
         { name: 'Menstruacion:', price: '$9000' },
         { name: 'Lluvia dorada:', price: '$9000' },
-        { name: 'Anal:', price: '$13500' },
+        { name: 'Anal:', price: '$35000' },
         { name: 'Ropa interior usada:', price: '$60000 envío incluido' },
         { name: 'Sin antifaz:', price: '$25000' },
       ],
@@ -102,15 +102,15 @@ export class PricesComponent {
     {
       title: 'Encuentros presenciales',
       items: [
-        { name: 'Precio por media hora sola:', price: '$Consultar' },
+        { name: 'Precio por media hora sola:', price: '$60000' },
         {
           name: 'Precio por media hora en trio con amiga:',
-          price: '$Consultar',
+          price: '$120000',
         },
-        { name: 'Precio por hora sola:', price: '$Consultar' },
+        { name: 'Precio por hora sola:', price: '$120000' },
         {
           name: 'Precio por hora en trio con amiga:',
-          price: '$Consultar',
+          price: '$220000',
         },
       ],
     },

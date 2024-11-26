@@ -52,3 +52,24 @@
   margin: 0 auto; /* Centrado horizontal */
   overflow: hidden; /* Evita el desbordamiento */
 }
+
+/* Estilos para el icono flotante de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde el borde inferior de la pantalla */
+  right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
+  border-radius: 50%; /* Redondea el fondo */
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Asegura que el icono esté siempre por encima de otros elementos */
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1); /* Efecto de agrandado al pasar el mouse */
+  }
+
+  img {
+    width: 50px; /* Tamaño del icono */
+    height: 50px;
+  }
+}

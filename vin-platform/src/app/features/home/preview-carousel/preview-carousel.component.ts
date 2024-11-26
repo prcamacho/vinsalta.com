@@ -11,10 +11,17 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 })
 export class PreviewCarouselComponent {
   slides = [
-    { src: 'assets/images/vin/slide1.jpg', alt: 'Slide 1' },
-    { src: 'assets/images/vin/slide2.jpg', alt: 'Slide 2' },
-    { src: 'assets/images/vin/slide3.jpg', alt: 'Slide 3' },
-    { src: 'assets/images/vin/slide4.jpg', alt: 'Slide 4' },
+    { src: 'assets/images/vin/slide1.png', alt: 'Slide 1' },
+    { src: 'assets/images/vin/slide2.png', alt: 'Slide 2' },
+    { src: 'assets/images/vin/slide3.png', alt: 'Slide 3' },
+    { src: 'assets/images/vin/slide4.png', alt: 'Slide 4' },
+    { src: 'assets/images/vin/slide5.png', alt: 'Slide 5' },
+    { src: 'assets/images/vin/slide6.png', alt: 'Slide 6' },
+    { src: 'assets/images/vin/slide7.png', alt: 'Slide 7' },
+    { src: 'assets/images/vin/slide8.png', alt: 'Slide 8' },
+    { src: 'assets/images/vin/slide9.png', alt: 'Slide 9' },
+    { src: 'assets/images/vin/slide10.png', alt: 'Slide 10' },
+    { src: 'assets/images/vin/slide11.png', alt: 'Slide 11' },
   ];
 
   swiperInstance: Swiper | null = null;
