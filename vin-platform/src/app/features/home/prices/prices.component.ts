@@ -100,7 +100,7 @@ export class PricesComponent {
       ],
     },
     {
-      title: 'Encuentros presenciales',
+      title: 'Hacer el amor sin limite de orgasmos',
       items: [
         { name: 'Precio por media hora sola:', price: '$60000' },
         {
@@ -111,6 +111,38 @@ export class PricesComponent {
         {
           name: 'Precio por hora en trio con amiga:',
           price: '$220000',
+        },
+        {
+          name: 'Opcionales:',
+          price: '',
+        },
+        {
+          name: 'Besos:',
+          price: 'Dependiendo de la higiente',
+        },
+        {
+          name: 'Caricias:',
+          price: 'Si',
+        },
+        {
+          name: 'Acabar en mis pechos:',
+          price: 'Si',
+        },
+        {
+          name: 'Acabar en mi panza:',
+          price: 'Si',
+        },
+        {
+          name: 'Tiempo para conocernos, comer, tomar algo:',
+          price: 'Si, maximo 1 hora',
+        },
+        {
+          name: 'Sin Proteccion:',
+          price: 'No negociable',
+        },
+        {
+          name: 'Hacerme Oral:',
+          price: 'No negociable',
         },
       ],
     },

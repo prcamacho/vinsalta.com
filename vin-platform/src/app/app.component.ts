@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PreventActionsService } from './core/prevent-actions/prevent-actions.service';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
