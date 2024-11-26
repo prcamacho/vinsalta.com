@@ -94,7 +94,7 @@ export class PricesComponent {
         { name: 'Pies:', price: '$3500' },
         { name: 'Menstruacion:', price: '$9000' },
         { name: 'Lluvia dorada:', price: '$9000' },
-        { name: 'Anal:', price: '$35000' },
+        { name: 'Anal (Solo 10 cm o menos):', price: '$35000' },
         { name: 'Ropa interior usada:', price: '$60000 envío incluido' },
         { name: 'Sin antifaz:', price: '$25000' },
       ],
@@ -135,6 +135,18 @@ export class PricesComponent {
         {
           name: 'Tiempo para conocernos, comer, tomar algo:',
           price: 'Si, maximo 1 hora',
+        },
+        {
+          name: 'Oral:',
+          price: 'Si',
+        },
+        {
+          name: 'Vaginal:',
+          price: 'Si',
+        },
+        {
+          name: 'Anal:',
+          price: 'Ver tabla fetiches',
         },
         {
           name: 'Sin Proteccion:',
