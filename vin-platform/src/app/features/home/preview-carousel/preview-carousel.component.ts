@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  QueryList,
-  ViewChildren,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { Swiper } from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -15,7 +9,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
   templateUrl: './preview-carousel.component.html',
   styleUrl: './preview-carousel.component.scss',
 })
-export class PreviewCarouselComponent implements AfterViewInit {
+export class PreviewCarouselComponent {
   slides = [
     { src: 'assets/images/vin/slide1.jpg', alt: 'Slide 1' },
     { src: 'assets/images/vin/slide2.jpg', alt: 'Slide 2' },
@@ -27,41 +21,12 @@ export class PreviewCarouselComponent implements AfterViewInit {
   lightboxOpen = false;
   lightboxImage = '';
 
-  @ViewChildren('carouselImage') images!: QueryList<ElementRef>;
-
   ngAfterViewInit(): void {
-    this.loadImages();
-  }
-
-  loadImages(): void {
-    const imageElements = this.images.toArray();
-    let loadedImagesCount = 0;
-
-    imageElements.forEach((imageElement, index) => {
-      const img = imageElement.nativeElement as HTMLImageElement;
-
-      // Si la imagen ya está cargada, incrementamos el contador
-      if (img.complete) {
-        loadedImagesCount++;
-      } else {
-        img.onload = () => {
-          loadedImagesCount++;
-          // Si todas las imágenes han sido cargadas, inicializamos Swiper
-          if (loadedImagesCount === imageElements.length) {
-            this.initializeSwiper();
-          }
-        };
-      }
-    });
-
-    // Si todas las imágenes ya estaban cargadas
-    if (loadedImagesCount === imageElements.length) {
-      this.initializeSwiper();
-    }
+    this.initializeSwiper();
   }
 
   initializeSwiper(): void {
-    // Inicializa el Swiper una vez que todas las imágenes estén cargadas
+    // Inicializa el Swiper
     this.swiperInstance = new Swiper('.swiper-container', {
       modules: [Navigation, Pagination, Autoplay],
       spaceBetween: 50,
@@ -91,4 +56,3 @@ export class PreviewCarouselComponent implements AfterViewInit {
     this.lightboxOpen = false;
   }
 }
-

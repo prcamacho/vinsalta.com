@@ -9,8 +9,7 @@
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: row;
+    max-width: 100vw;
   }
 
   &__slide {
@@ -25,7 +24,7 @@
     display: flex; /* Asegura que las imágenes se ajusten dentro del contenedor */
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     height: auto;
 
     /* Ajuste de tamaño responsive para las imágenes */

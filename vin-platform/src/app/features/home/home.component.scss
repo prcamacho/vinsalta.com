@@ -16,10 +16,12 @@
   position: absolute;
   left: 50%; /* Centrado horizontalmente */
   transform: translateX(-50%); /* Centrado exacto horizontal */
-  
+
   /* Usamos calc() para ubicar la imagen de perfil */
-  top: calc(100% - 75px); /* 50% de la altura de la portada menos la mitad del tamaño de la imagen de perfil */
-  
+  top: calc(
+    100% - 75px
+  ); /* 50% de la altura de la portada menos la mitad del tamaño de la imagen de perfil */
+
   width: 180px; /* Tamaño de la imagen de perfil */
   height: 180px;
   border-radius: 50%; /* Hace la imagen redonda */
@@ -42,4 +44,11 @@
     width: 120px; // Reduce el tamaño de la imagen de perfil en pantallas más pequeñas
     height: 120px;
   }
+}
+
+.home__carousel-container {
+  width: 100%; /* Asegúrate de que ocupe todo el ancho del padre */
+  max-width: 1200px; /* Límite opcional para pantallas grandes */
+  margin: 0 auto; /* Centrado horizontal */
+  overflow: hidden; /* Evita el desbordamiento */
 }
