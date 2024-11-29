@@ -107,10 +107,10 @@ export class PricesComponent {
           name: 'Precio por media hora en trio con amiga:',
           price: '$120000',
         },
-        { name: 'Precio por hora sola:', price: '$120000' },
+        { name: 'Precio por hora sola:', price: '$90000' },
         {
           name: 'Precio por hora en trio con amiga:',
-          price: '$220000',
+          price: '$170000',
         },
         {
           name: 'Opcionales:',
