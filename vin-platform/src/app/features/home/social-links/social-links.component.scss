@@ -1,0 +1,28 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  a {
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+
+    &:hover {
+      color: #ff4081; // Color sensual
+      transform: scale(1.2);
+    }
+
+    i {
+      display: inline-block;
+    }
+  }
+}
