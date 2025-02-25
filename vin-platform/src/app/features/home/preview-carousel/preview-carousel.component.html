@@ -1,15 +1,15 @@
 <div class="swiper-container carousel__container">
   <h2>Fotos</h2>
   <div class="swiper-wrapper carousel__wrapper">
-    @for (slide of slides; track $index) {
-    <div class="swiper-slide carousel__slide">
-      <img
-        [src]="slide.src"
-        [alt]="slide.alt"
-        (click)="openLightbox(slide.src)"
-        class="carousel__image"
-      />
-    </div>
+    @for (slide of slides; track slide) {
+      <div class="swiper-slide carousel__slide">
+        <img
+          [src]="slide.src"
+          [alt]="slide.alt"
+          (click)="openLightbox(slides.indexOf(slide))"
+          class="carousel__image"
+        />
+      </div>
     }
   </div>
 
@@ -21,9 +21,11 @@
   <div class="carousel__pagination"></div>
 </div>
 
-<!-- Lightbox -->
 @if (lightboxOpen) {
-<div class="lightbox__overlay" (click)="closeLightbox()">
-  <img [src]="lightboxImage" alt="Lightbox Image" class="lightbox__image" />
-</div>
+  <div class="lightbox__overlay">
+    <button class="lightbox__close" (click)="closeLightbox()">✖</button>
+    <img [src]="slides[currentIndex].src" alt="Lightbox Image" class="lightbox__image" />
+    <button class="lightbox__nav lightbox__prev" (click)="prevImage()">←</button>
+    <button class="lightbox__nav lightbox__next" (click)="nextImage()">→</button>
+  </div>
 }

@@ -22,18 +22,22 @@ export class PreviewCarouselComponent {
     { src: 'assets/images/vin/slide9.png', alt: 'Slide 9' },
     { src: 'assets/images/vin/slide10.png', alt: 'Slide 10' },
     { src: 'assets/images/vin/slide11.png', alt: 'Slide 11' },
+    { src: 'assets/images/vin/slide12.png', alt: 'Slide 12' },
+    { src: 'assets/images/vin/slide13.png', alt: 'Slide 13' },
+    { src: 'assets/images/vin/slide14.png', alt: 'Slide 14' },
+    { src: 'assets/images/vin/slide15.png', alt: 'Slide 15' },
+    { src: 'assets/images/vin/slide16.png', alt: 'Slide 16' },
   ];
 
   swiperInstance: Swiper | null = null;
   lightboxOpen = false;
-  lightboxImage = '';
+  currentIndex = 0;
 
   ngAfterViewInit(): void {
     this.initializeSwiper();
   }
 
   initializeSwiper(): void {
-    // Inicializa el Swiper
     this.swiperInstance = new Swiper('.swiper-container', {
       modules: [Navigation, Pagination, Autoplay],
       spaceBetween: 50,
@@ -54,12 +58,21 @@ export class PreviewCarouselComponent {
     });
   }
 
-  openLightbox(image: string): void {
-    this.lightboxImage = image;
+  openLightbox(index: number): void {
+    this.currentIndex = index;
     this.lightboxOpen = true;
   }
 
   closeLightbox(): void {
     this.lightboxOpen = false;
+  }
+
+  nextImage(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+  }
+
+  prevImage(): void {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.slides.length) % this.slides.length;
   }
 }

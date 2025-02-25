@@ -129,13 +129,57 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Asegúrate de que esté por encima del carrusel */
-    overflow: hidden; /* Asegura que nada se desborde */
+    z-index: 1000;
+    overflow: hidden;
   }
 
   &__image {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
   }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: #e60026; /* Usa el mismo color del h2 */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      color: #e60027; /* Un fucsia vivo */
+      transform: scale(1.2);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: scale(1.2);
+    }
+  }
+
+  &__prev {
+    left: 5%;
+  }
+
+  &__next {
+    right: 5%;
+  }
 }
+
