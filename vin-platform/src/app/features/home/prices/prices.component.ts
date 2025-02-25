@@ -12,13 +12,13 @@ export class PricesComponent {
   pricingCategories = [
     {
       title: 'Canales VIP',
-      items: [{ name: 'Sets - Lésbico - Vivos:', price: '$15000 al mes' }],
+      items: [{ name: 'Sets - Lésbico - Vivos:', price: '$22000 al mes' }],
     },
     {
       title: 'Sexting',
       items: [
         { name: 'Solo texto:', price: '$800 el min' },
-        { name: 'Con contenido del momento:', price: '$1500 el min' },
+        { name: 'Con contenido del momento:', price: '$1500 el min (Minimo 5 min' },
       ],
     },
     {
@@ -88,15 +88,15 @@ export class PricesComponent {
       ],
     },
     {
-      title: 'Fetiches extra disponibles',
+      title: 'Fetiches extra disponibles (encuentros)',
       items: [
-        { name: 'Fumar en el video:', price: '$5000' },
-        { name: 'Pies:', price: '$3500' },
+        { name: 'Fumar:', price: '$5000' },
+        { name: 'Pies:', price: '$9000' },
         { name: 'Menstruacion:', price: '$9000' },
         { name: 'Lluvia dorada:', price: '$9000' },
         { name: 'Anal (Solo 10 cm o menos):', price: '$35000' },
         { name: 'Ropa interior usada:', price: '$60000 envío incluido' },
-        { name: 'Sin antifaz:', price: '$25000' },
+        { name: 'Grabar Sin antifaz:', price: '$25000' },
       ],
     },
     {
