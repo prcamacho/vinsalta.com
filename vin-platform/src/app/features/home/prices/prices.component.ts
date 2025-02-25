@@ -18,7 +18,10 @@ export class PricesComponent {
       title: 'Sexting',
       items: [
         { name: 'Solo texto:', price: '$800 el min' },
-        { name: 'Con contenido del momento:', price: '$1500 el min (Minimo 5 min' },
+        {
+          name: 'Con contenido del momento:',
+          price: '$1500 el min (Minimo 5 min)',
+        },
       ],
     },
     {
@@ -134,7 +137,7 @@ export class PricesComponent {
         },
         {
           name: 'Tiempo para conocernos, comer, tomar algo:',
-          price: 'Si, maximo 1 hora',
+          price: 'Si,consultar precio',
         },
         {
           name: 'Oral:',
