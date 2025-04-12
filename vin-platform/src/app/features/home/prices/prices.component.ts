@@ -56,7 +56,7 @@ export class PricesComponent {
       ],
     },
     {
-      title: 'Calificación de conchita',
+      title: 'Calificación de vagina',
       items: [{ name: 'Por foto:', price: '$7000' }],
     },
     {
