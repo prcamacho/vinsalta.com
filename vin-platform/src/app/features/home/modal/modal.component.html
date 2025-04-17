@@ -2,10 +2,27 @@
 <div class="modal-backdrop">
   <div class="modal">
     <button class="close-btn" (click)="closeModal()">×</button>
-    <h2 class="modal-title">🎉 Hoy Grabamos? 🎉</h2>
+    <h2 class="modal-title">👩‍❤️‍💋‍👩 Venis a Visitarnos? 👩‍❤️‍💋‍👩</h2>
+    <video
+      #modalVideo
+      autoplay
+      muted
+      loop
+      playsinline
+      width="100%"
+      style="border-radius: 10px; margin-bottom: 1rem"
+    >
+      <source
+        src="https://media.vinsalta.com/km_20250416_720p_60f_20250416_194551.mp4"
+        type="video/mp4"
+      />
+      Tu navegador no soporta la reproducción de video.
+    </video>
+
     <p class="modal-content">
-      Hay descuentos hoy!  <br />(Precios y Servicios especiales - Salta Capital)<br />
-      Mandame mensajito
+      Hoy Promo de Trios (de 18 a 22hs) <br />Te esperamos por Caseros y Florida
+      - Salta<br />
+      40 minutos x solo $100 mil Amor
     </p>
     <button class="accept-btn" (click)="acceptPromo()">Yendoo</button>
   </div>

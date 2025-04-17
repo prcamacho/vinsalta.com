@@ -103,7 +103,7 @@ export class PricesComponent {
       ],
     },
     {
-      title: 'Hacer el amor sin limite de orgasmos',
+      title: 'Encuentros presenciales con Libre Participacion',
       items: [
         { name: 'Precio por media hora sola:', price: '$60000' },
         {
